@@ -1,0 +1,36 @@
+<div ng-controller="surveryController"> 
+	<h1 ng-bind="survey.question"></h1>
+	<a ng-click="return_to_polls()" href="">Go To Polls</a>
+	<p>Click vote button to choose one</p>
+	<table>
+		<thead>
+			<tr>
+				<th>Option</th>
+				<th>Current Count of Votes</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td ng-bind="surveys._vote[0].option1"></td>
+				<td ng-bind="surveys._vote[0].votes1"></td>
+				<td><button ng-click="vote(surveys._vote[0].option1, 1)">Vote</button></td>
+			</tr>
+			<tr>
+				<td ng-bind="surveys._vote[0].option2"></td>
+				<td ng-bind="surveys._vote[0].votes2"></td>
+				<td><button ng-click="vote(surveys._vote[0].option2, 2)">Vote</button></td>
+			</tr>
+			<tr>
+				<td ng-bind="surveys._vote[0].option3"></td>
+				<td ng-bind="surveys._vote[0].votes3"></td>
+				<td><button ng-click="vote(surveys._vote[0].option3, 3)">Vote</button></td>
+			</tr>
+			<tr>
+				<td ng-bind="surveys._vote[0].option4"></td>
+				<td ng-bind="surveys._vote[0].votes4"></td>
+				<td><button ng-click="vote(surveys._vote[0].option4, 4)">Vote</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

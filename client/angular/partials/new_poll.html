@@ -1,0 +1,17 @@
+<div ng-controller="new_pollController"> 
+	<a ng-click ="cancel()" href="">Cancel</a>
+	<form>
+		<h1>Put the question and options here:</h1>
+		<label>Questions:</label>
+		<input type="text" ng-model="poll.question">
+		<label>Option 1:</label>
+		<input type="text" ng-model="poll.option_one">
+		<label>Option 2:</label>
+		<input type="text" ng-model="poll.option_two">
+		<label>Option 3:</label>
+		<input type="text" ng-model="poll.option_three">
+		<label>Option 4:</label>
+		<input type="text" ng-model="poll.option_four">
+		<button ng-click="create_poll()">Create Poll</button>
+	</form>
+</div>
